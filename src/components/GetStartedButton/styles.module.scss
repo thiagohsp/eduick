@@ -1,0 +1,20 @@
+.getStartedButton {
+  height: 3rem;
+  border-radius: 0.25rem;
+  background: var(--yellow-500);
+  border: 0;
+  padding: 0 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--purple-500);
+  font-weight: bold;
+
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
