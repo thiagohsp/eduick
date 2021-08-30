@@ -1,4 +1,4 @@
-import { SignInButton } from '../SignInButton';
+import { GetStartedButton } from '../GetStartedButton';
 import styles from './styles.module.scss';
 import ActiveLink from '../ActiveLink';
 
@@ -15,7 +15,7 @@ export function Header() {
             <a>About Us</a>
           </ActiveLink>
         </nav>
-        <SignInButton />
+        <GetStartedButton />
       </div>
     </header>
   )

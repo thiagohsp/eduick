@@ -9,6 +9,8 @@
 
   --purple-900: #200e64;
   --purple-500: #6f48ec;
+  --purple-400: #7955e8;
+  --purple-300: #a68eef;
 
   --yellow-500: #ffd74f;
   --yellow-200: #ffeaa4;
@@ -27,8 +29,10 @@
 }
 
 body {
-  background: linear-gradient(180deg, #7b57fd 0%, #6135d7 100%) no-repeat,
-    #200e64;
+  background: url("/images/detail-bg.svg") 1220px top no-repeat,
+    linear-gradient(180deg, #7b57fd 0%, #6135d7 100%) no-repeat, #200e64;
+
+  background-size: auto calc(100vh - 5rem), auto, auto;
   color: var(--white);
 }
 

@@ -1,0 +1,27 @@
+.radioBox {
+  width: 100%;
+  padding: 1rem;
+  background: var(--purple-400);
+  border: 1px solid var(--purple-300);
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: var(--white);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  span {
+    display: inline-block;
+    margin-left: 1rem;
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 0.875rem;
+    color: var(--white);
+  }
+}
