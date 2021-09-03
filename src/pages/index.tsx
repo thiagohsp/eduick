@@ -1,10 +1,12 @@
 import { GetStaticProps } from "next";
 import Head from "next/head";
+import { useState } from "react";
 import { Button } from "../components/Button";
 import { GetStartedButton } from "../components/GetStartedButton";
+import { Header } from "../components/Header";
+import { HomeHeader } from "../components/Header/HomeHeader";
 import Input from "../components/Input";
 import RadioBox from "../components/RadioBox";
-import { SubscribeButton } from "../components/SubscribeButton";
 import { stripe } from "../services/stripe";
 
 import styles from './home.module.scss';
@@ -16,12 +18,20 @@ interface HomeProps {
   }
 }
 
+type PersonType = "teacher" | "student";
+
 export default function Home({ product }: HomeProps) {
+  const [personType, setPersonType] = useState<PersonType>("teacher");
+  const handleButtonClick = (type: PersonType) => {
+    setPersonType(type);
+  }
   return (
     <div className={styles.container}>
       <Head>
         <title>Eduick | Find your BEST Teacher</title>
       </Head>
+
+      <HomeHeader />
 
       <main className={styles.contentContainer}>
         <img src="/images/hero.svg" alt="Girl Coding" />
@@ -38,12 +48,14 @@ export default function Home({ product }: HomeProps) {
             <div className={styles.formContainer__searchContainer}>
               <div className={styles.radioBoxContainer}>
                 <RadioBox
-                  isActive={true}
+                  isActive={personType === "teacher"}
+                  onClick={() => handleButtonClick("teacher")}
                 >
                   <span>I'M A TEACHER</span>
                 </RadioBox>
                 <RadioBox
-                  isActive={false}
+                  isActive={personType === "student"}
+                  onClick={() => handleButtonClick("student")}
                 >
                   <span>I'M A STUDENT</span>
                 </RadioBox>

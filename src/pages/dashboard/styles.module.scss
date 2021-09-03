@@ -1,0 +1,39 @@
+.container {
+  background-color: #e5e5e5;
+  height: 100vh;
+}
+
+.title {
+  background-color: var(--white);
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 2rem 0;
+  display: flex;
+  align-items: flex-start;
+
+  img:first-of-type {
+    margin-left: -2rem;
+  }
+
+  .titleText {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem;
+
+    h1 {
+      font-family: "Poppins";
+      font-weight: 400;
+      color: var(--purple-900);
+    }
+
+    p {
+      margin-top: 2rem;
+      width: 520px;
+      font-family: "Open Sans";
+      font-weight: 400;
+      color: var(--text);
+    }
+  }
+}

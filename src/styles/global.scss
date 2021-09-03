@@ -6,6 +6,7 @@
 
 :root {
   --white: #fff;
+  --text: #343434;
 
   --purple-900: #200e64;
   --purple-500: #6f48ec;
@@ -28,13 +29,13 @@
   }
 }
 
-body {
-  background: url("/images/detail-bg.svg") 1220px top no-repeat,
-    linear-gradient(180deg, #7b57fd 0%, #6135d7 100%) no-repeat, #200e64;
+// body {
+//   background: url("/images/detail-bg.svg") 1220px top no-repeat,
+//     linear-gradient(180deg, #7b57fd 0%, #6135d7 100%) no-repeat, #200e64;
 
-  background-size: auto calc(100vh - 5rem), auto, auto;
-  color: var(--white);
-}
+//   background-size: auto calc(100vh - 5rem), auto, auto;
+//   color: var(--white);
+// }
 
 body,
 input,

@@ -1,8 +1,9 @@
-import { GetStartedButton } from '../GetStartedButton';
+import ActiveLink from '../../ActiveLink';
+import { GetStartedButton } from '../../GetStartedButton';
 import styles from './styles.module.scss';
-import ActiveLink from '../ActiveLink';
 
-export function Header() {
+export function HomeHeader() {
+
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
@@ -19,4 +20,5 @@ export function Header() {
       </div>
     </header>
   )
+
 }

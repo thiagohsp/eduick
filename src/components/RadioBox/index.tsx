@@ -1,13 +1,13 @@
-import React, { ButtonHTMLAttributes, ReactElement } from 'react';
+import React, { ButtonHTMLAttributes } from 'react';
 import { FaCheckCircle, FaCircle } from "react-icons/fa"
-import { opacify } from 'polished'
 import styles from './styles.module.scss';
 
-interface RadioBoxProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface RadioBoxProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  //interface RadioBoxProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   isActive: boolean;
 }
 
-const RadioBox = ({ isActive, children, ...rest }: RadioBoxProps) => {
+const RadioBox: React.FC<RadioBoxProps> = ({ isActive, children, ...rest }) => {
   return (
     <button
       className={`${styles.radioBox}`}
