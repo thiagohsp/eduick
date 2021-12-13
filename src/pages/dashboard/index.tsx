@@ -1,5 +1,6 @@
 import React from 'react';
 import { DashboardHeader } from '../../components/Header/DashboardHeader';
+import LessonCard from '../../components/LessonCard';
 import styles from './styles.module.scss'
 // import { Container } from './styles';
 
@@ -15,6 +16,12 @@ const Dashboard: React.FC = () => {
             <p>Whether you are a student trying to find your ideal private language teachers/tutors</p>
           </div>
           <img src="/images/meeting.jpg" alt="People Studying" />
+        </section>
+
+        <section className={styles.content}>
+          <LessonCard />
+          <LessonCard />
+          <LessonCard />
         </section>
       </main>
     </div>

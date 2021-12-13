@@ -2,12 +2,9 @@ import { GetStaticProps } from "next";
 import Head from "next/head";
 import { useState } from "react";
 import { Button } from "../components/Button";
-import { GetStartedButton } from "../components/GetStartedButton";
-import { Header } from "../components/Header";
 import { HomeHeader } from "../components/Header/HomeHeader";
 import Input from "../components/Input";
 import RadioBox from "../components/RadioBox";
-import { stripe } from "../services/stripe";
 
 import styles from './home.module.scss';
 
@@ -73,23 +70,4 @@ export default function Home({ product }: HomeProps) {
       </main>
     </div>
   )
-}
-
-export const getStaticProps: GetStaticProps = async () => {
-  const price = await stripe.prices.retrieve('price_1IdRzvGYTsQDym9mRbuf6joF')
-
-  const product = {
-    priceId: price.id,
-    amount: new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD'
-    }).format(price.unit_amount / 100)
-  }
-
-  return {
-    props: {
-      product
-    },
-    revalidate: 60 * 60 * 24, // 24 hours
-  }
 }

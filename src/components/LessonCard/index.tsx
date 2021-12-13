@@ -3,8 +3,8 @@ import styles from './styles.module.scss';
 
 const LessonCard: React.FC = () => {
   return (
-    <div>
-
+    <div className={styles.card}>
+      <h1>Lesson</h1>
     </div>
   );
 }
